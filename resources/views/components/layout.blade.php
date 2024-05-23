@@ -34,23 +34,23 @@
             </button>
         </menu>
     </header>
-    <div class="min-h-screen w-full bg-gray-100 absolute top-20 left-0 z-10 hidden md:hidden" id="mobile-nav">
-        <menu class="ml-10">
+    <div class="min-h-[60vh] w-full bg-white shadow-2xl absolute top-24 left-0 z-10 hidden md:hidden overflow-y-hidden" id="mobile-nav">
+        <menu>
             <nav>
-                <ul class="my-14">
-                    <li><x-nav-links href="{{url('/')}}" class="mb-2 text-2xl font-bold">Home</x-nav-links></li>
-                    <li><x-nav-links href="{{url('/about')}}" class="my-2 text-2xl font-bold">About</x-nav-links></li>
-                    <li><x-nav-links href="{{url('/contact')}}" class="my-2 text-2xl font-bold">Contact</x-nav-links></li>
+                <ul>
+                    <li><x-mobile-nav-links href="{{url('/')}}">Home</x-mobile-nav-links></li>
+                    <li><x-mobile-nav-links href="{{url('/about')}}">About</x-mobile-nav-links></li>
+                    <li><x-mobile-nav-links href="{{url('/contact')}}">Contact</x-mobile-nav-links></li>
                 </ul>
             </nav>
-            <div >
+            <div>
                 @guest
-                    <x-nav-links href="{{url('/login')}}" class="mb-2 text-2xl font-bold">Login</x-nav-links>
-                    <x-nav-links href="{{url('/register')}}" class="mb-2 text-2xl font-bold">Register</x-nav-links>
+                    <li><x-mobile-nav-links href="{{url('/login')}}">Login</x-mobile-nav-links></li>
+                    <li><x-mobile-nav-links href="{{url('/register')}}">Register</x-mobile-nav-links></li>
                 @endguest
             </div>
             @auth
-                <x-nav-links href="{{url('/dashboard')}}">Dashboard</x-nav-links>
+                <x-mobile-nav-links href="{{url('/dashboard')}}">Dashboard</x-mobile-nav-links>
             @endauth
         </menu>
     </div>

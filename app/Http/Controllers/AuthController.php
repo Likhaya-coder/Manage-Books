@@ -19,9 +19,8 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return view('welcome');
+        return view('index');
     }
-
 
     public function login() {
         return view('auth.login');
@@ -38,7 +37,6 @@ class AuthController extends Controller
 
         $request->session()->regenerate();
 
-        return view('welcome');
+        return view('index');
     }
-
 }
