@@ -10,7 +10,7 @@
 <body class="min-h-screen">
     <header class="max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto py-2 min-h-20">
         <menu class="flex mx-10 md:mx-0 justify-between lg:justify-around items-center">
-            <a href="{{url('/')}}"><img width="100px" src="./images/book_hive.png" alt=""></a>
+            <a href="{{url('/dashboard')}}"><img width="100px" src="./images/book_hive.png" alt=""></a>
             <nav>
                 <ul class="hidden md:flex">
                     <li><x-nav-links href="{{url('/')}}" active="{{request()->is('/')}}">Home</x-nav-links></li>

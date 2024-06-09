@@ -9,7 +9,7 @@
             <div class="bg-white rounded-r-none md:rounded-r-xl">
                 <h1 class="text-orange-400 text-xl font-extrabold mt-20 mx-14 tracking-wider"><span class="text-black text-5xl font-extrabold border-b-4 border-black">R</span>EGISTER</h1>
                 <p class="text-gray-400 text-sm mt-6 mx-14">Please complete to create your account</p>
-                <form class="mx-14 my-8" action="{{route('register')}}" method="POST">
+                <form class="mx-14 my-8" action="{{route('register-dashboard')}}" method="POST">
                     @csrf
                     <div class="flex">
                         <div class="mr-2">
@@ -53,8 +53,8 @@
                         <p class="ml-4 mt-1 text-xs">I agree to all statements included in<a href="#" class="text-orange-600"> teams of service</a></p>
                     </div>
                     @error('terms')
-                            <div class="text-xs text-red-600">{{ $message }}</div>
-                        @enderror
+                        <div class="text-xs text-red-600">{{ $message }}</div>
+                    @enderror
                     <div class="flex justify-between items-center mt-6">
                         <x-form-button>Sign Up</x-form-button>
                         <a href="{{route('login')}}" class="text-orange-500 text-sm">I am already a member</a>

@@ -9,7 +9,7 @@
             <div class="bg-white rounded-r-none md:rounded-r-xl md:pt-24">
                 <h1 class="text-orange-400 text-xl font-extrabold mt-20 mx-14 tracking-wider"><span class="text-black text-5xl font-extrabold border-b-4 border-black">L</span>OGIN</h1>
                 <p class="text-gray-400 text-sm mt-6 mx-14">Please complete to login to your account</p>
-                <form class="mx-14 my-8" action="{{route('login')}}" method="POST">
+                <form class="mx-14 my-8" action="{{route('login-dashboard')}}" method="POST">
                     @csrf
                     <div class="mt-4">
                         <x-input-label for="email">Email</x-input-label>
